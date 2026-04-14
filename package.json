@@ -1,16 +1,29 @@
 {
   "name": "chinese-to-english",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Scan and replace Chinese characters in your project with English equivalents, with smart context-aware detection",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "c2e": "dist/cli.js"
   },
-  "keywords": [],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "node dist/test.js"
+  },
+  "keywords": [
+    "chinese",
+    "english",
+    "i18n",
+    "localization",
+    "replace",
+    "scan",
+    "punctuation"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "@types/glob": "^9.0.0",
     "@types/node": "^25.6.0",
     "typescript": "^6.0.2"
   },
